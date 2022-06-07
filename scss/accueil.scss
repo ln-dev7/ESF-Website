@@ -116,6 +116,10 @@
     line-height: 55px;
     color: $indigo;
     margin-bottom: 20px;
+    @media screen and (max-width: 460px) {
+      font-size: 25px;
+      line-height: 35px;
+    }
   }
   &-cards {
     width: 100%;
@@ -128,9 +132,9 @@
   &-card:nth-child(1) {
     background: linear-gradient(to right, #272d4ebf, #272d4e00),
       url("/images/Rectangle\ 2590.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     &:hover {
       background: linear-gradient(
           180deg,
@@ -138,17 +142,17 @@
           #27ae60 100%
         ),
         url("/images/Rectangle\ 2590.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     }
   }
   &-card:nth-child(2) {
     background: linear-gradient(to right, #272d4ebf, #272d4e00),
       url("/images/Rectangle\ 2590.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     &:hover {
       background: linear-gradient(
           180deg,
@@ -156,17 +160,17 @@
           #27ae60 100%
         ),
         url("/images/Rectangle\ 2590.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     }
   }
   &-card:nth-child(3) {
     background: linear-gradient(to right, #272d4ebf, #272d4e00),
       url("/images/Rectangle.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     &:hover {
       background: linear-gradient(
           180deg,
@@ -174,17 +178,17 @@
           #27ae60 100%
         ),
         url("/images/Rectangle.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     }
   }
   &-card:nth-child(4) {
     background: linear-gradient(to right, #272d4ebf, #272d4e00),
       url("/images/Rectangle\ 252.png");
-      background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     &:hover {
       background: linear-gradient(
           180deg,
@@ -192,9 +196,9 @@
           #27ae60 100%
         ),
         url("/images/Rectangle\ 252.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     }
   }
   &-card {
@@ -229,6 +233,45 @@
       h2 {
         transform: translateY(-50px);
       }
+    }
+  }
+}
+
+.socials {
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &-title {
+    font-size: 35px;
+    text-align: center;
+    font-weight: 800;
+    line-height: 55px;
+    color: $indigo;
+    margin-bottom: 20px;
+    @media screen and (max-width: 460px) {
+      font-size: 25px;
+      line-height: 35px;
+    }
+  }
+  &-cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  &-card {
+    border: 2px solid rgba($color: $gray, $alpha: 0.4);
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    img {
+      width: 100px;
     }
   }
 }
@@ -271,13 +314,16 @@
 }
 
 @media only screen and (max-width: 1030px) {
-    .cycle {
-        padding: 50px 40px;
-        &-card{
-            width: 250px;
-        }
+  .cycle {
+    padding: 50px 40px;
+    &-card {
+      width: 250px;
     }
   }
+  .socials {
+    padding: 50px 40px;
+  }
+}
 
 @media only screen and (max-width: 1065px) {
   .description {
@@ -304,13 +350,16 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .cycle {
-        padding: 50px 20px;
-        &-card{
-            width: 90%;
-        }
+  .cycle {
+    padding: 50px 20px;
+    &-card {
+      width: 90%;
     }
   }
+  .socials {
+    padding: 50px 20px;
+  }
+}
 
 @media only screen and (max-width: 640px) {
   .description {
