@@ -49,9 +49,7 @@
     align-items: center;
     padding: 13px 30px;
     &-logo {
-      color: $green;
-      font-weight: 800;
-      font-size: 18px;
+        width: 175px;
     }
     &-links {
       width: 60%;
@@ -80,6 +78,16 @@
           &.show + .links-items {
             display: block;
           }
+        }
+      }
+      .btn-join {
+          display: none;
+        a {
+          background: $green;
+          color: $white;
+          padding: 10px 14px 8px 14px;
+          border-radius: 5px;
+          font-weight: 700;
         }
       }
       .links-items {
@@ -133,18 +141,24 @@
     &-bottom {
       position: relative;
       &-links {
-        position: absolute;
+        position: fixed;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        justify-content: flex-start;
         background: $white;
         width: 80%;
         padding-left: 30px;
-        padding-top: 15px;
+        padding-top: 50px;
         left: 0;
         top: 0;
-        transform: translateX(-100%);
-        transition: transform .3s ease;
+        bottom: 0;
+        // transform: translateX(-100%);
+        overflow-y: scroll;
+        transition: transform 0.3s ease;
+        &::-webkit-scrollbar {
+            display: none;
+          }
         li {
           margin: 10px 0;
           display: flex;
@@ -152,17 +166,20 @@
           justify-content: center;
           align-items: flex-start;
         }
+        .btn-join{
+            display: block;
+        }
         .links-items {
           position: static;
           margin-left: 25%;
-          background: #FFF;
+          background: #fff;
           border-radius: 0px;
           border: none;
           width: 100%;
         }
       }
-      &-links.show-menu{
-          transform: translateX(0);
+      &-links.show-menu {
+        transform: translateX(0);
       }
       &-search {
         display: none;
@@ -207,8 +224,8 @@
         }
       }
     }
-    &-bottom{
-        padding: 13px 5px;
+    &-bottom {
+      padding: 13px 5px;
     }
   }
 }

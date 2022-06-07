@@ -24,6 +24,10 @@ img {
   height: auto;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
   position: relative;
   background-color: #FFF;
@@ -85,9 +89,7 @@ body::-webkit-scrollbar-thumb {
   padding: 13px 30px;
 }
 .header-bottom-logo {
-  color: #27AE60;
-  font-weight: 800;
-  font-size: 18px;
+  width: 175px;
 }
 .header-bottom-links {
   width: 60%;
@@ -114,6 +116,16 @@ body::-webkit-scrollbar-thumb {
 }
 .header-bottom-links li .arrow.show + .links-items {
   display: block;
+}
+.header-bottom-links .btn-join {
+  display: none;
+}
+.header-bottom-links .btn-join a {
+  background: #27AE60;
+  color: #FFF;
+  padding: 10px 14px 8px 14px;
+  border-radius: 5px;
+  font-weight: 700;
 }
 .header-bottom-links .links-items {
   position: absolute;
@@ -163,18 +175,23 @@ body::-webkit-scrollbar-thumb {
     position: relative;
   }
   .header-bottom-links {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
     background: #FFF;
     width: 80%;
     padding-left: 30px;
-    padding-top: 15px;
+    padding-top: 50px;
     left: 0;
     top: 0;
-    transform: translateX(-100%);
+    bottom: 0;
+    overflow-y: scroll;
     transition: transform 0.3s ease;
+  }
+  .header-bottom-links::-webkit-scrollbar {
+    display: none;
   }
   .header-bottom-links li {
     margin: 10px 0;
@@ -183,10 +200,13 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: flex-start;
   }
+  .header-bottom-links .btn-join {
+    display: block;
+  }
   .header-bottom-links .links-items {
     position: static;
     margin-left: 25%;
-    background: #FFF;
+    background: #fff;
     border-radius: 0px;
     border: none;
     width: 100%;
@@ -247,6 +267,10 @@ li {
 img {
   max-width: 100%;
   height: auto;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
