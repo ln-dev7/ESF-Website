@@ -1,1 +1,1 @@
-../../.././dart-sass-ubuntu/sass acceuil.scss ../css/acceuil.css --no-source-map --watch
+../../.././dart-sass-ubuntu/sass accueil.scss ../css/accueil.css --no-source-map --watch

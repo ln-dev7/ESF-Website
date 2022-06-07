@@ -41,6 +41,67 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
+.header-top {
+  background: rgba(39, 45, 78, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 30px;
+}
+.header-top-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-top-contact h2 {
+  color: #272D4E;
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 30px;
+}
+.header-top-contact a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 7px;
+}
+.header-top-contact a span {
+  font-size: 16px;
+  margin-left: 5px;
+  color: #94A2B3;
+  font-weight: 500;
+}
+.header-top-socials a {
+  margin: 0 10px;
+}
+.header-top-socials a img {
+  width: 18px;
+}
+.header-bottom {
+  background: #fcfcfc;
+}
+
+@media only screen and (max-width: 820px) {
+  .header-top {
+    flex-direction: column;
+  }
+  .header-top-socials {
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .header-top-contact h2 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .header-top-contact {
+    flex-direction: column;
+  }
+  .header-top-contact a {
+    margin-bottom: 5px;
+  }
+}
 *, ::before, ::after {
   box-sizing: border-box;
   font-family: "Overpass", sans-serif;

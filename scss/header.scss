@@ -1,1 +1,85 @@
-@import 'settings';
+@import "settings";
+
+.header {
+  &-top {
+    background: rgba($color: $indigo, $alpha: 0.04);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 30px;
+    &-contact {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      h2 {
+        color: $indigo;
+        font-size: 16px;
+        font-weight: 700;
+        margin-right: 30px;
+      }
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 7px;
+        span {
+          font-size: 16px;
+          margin-left: 5px;
+          color: $gray;
+          font-weight: 500;
+        }
+        img {
+          // width: 30px;
+        }
+      }
+    }
+    &-socials {
+      a {
+        margin: 0 10px;
+        img {
+          width: 18px;
+        }
+      }
+    }
+  }
+  &-bottom {
+    background: #fcfcfc;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .header {
+    &-top {
+      flex-direction: column;
+      &-socials {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .header {
+    &-top {
+      &-contact {
+        h2 {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+    .header {
+      &-top {
+        &-contact {
+            flex-direction: column;
+            a{
+                margin-bottom: 5px;
+            }
+        }
+      }
+    }
+  }
+  
