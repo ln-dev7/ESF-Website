@@ -107,6 +107,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: rgba(39, 45, 78, 0.04);
+  clip-path: ellipse(150% 100% at 50% 100%);
   &-title {
     font-size: 35px;
     text-align: center;
@@ -119,11 +121,16 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   &-card:nth-child(1) {
     background: linear-gradient(to right, #272d4ebf, #272d4e00),
       url("/images/Rectangle\ 2590.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     &:hover {
       background: linear-gradient(
           180deg,
@@ -131,11 +138,17 @@
           #27ae60 100%
         ),
         url("/images/Rectangle\ 2590.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
   }
   &-card:nth-child(2) {
     background: linear-gradient(to right, #272d4ebf, #272d4e00),
       url("/images/Rectangle\ 2590.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     &:hover {
       background: linear-gradient(
           180deg,
@@ -143,11 +156,17 @@
           #27ae60 100%
         ),
         url("/images/Rectangle\ 2590.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
   }
   &-card:nth-child(3) {
     background: linear-gradient(to right, #272d4ebf, #272d4e00),
       url("/images/Rectangle.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
     &:hover {
       background: linear-gradient(
           180deg,
@@ -155,11 +174,17 @@
           #27ae60 100%
         ),
         url("/images/Rectangle.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
   }
   &-card:nth-child(4) {
     background: linear-gradient(to right, #272d4ebf, #272d4e00),
       url("/images/Rectangle\ 252.png");
+      background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     &:hover {
       background: linear-gradient(
           180deg,
@@ -167,6 +192,9 @@
           #27ae60 100%
         ),
         url("/images/Rectangle\ 252.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
     }
   }
   &-card {
@@ -242,6 +270,15 @@
   }
 }
 
+@media only screen and (max-width: 1030px) {
+    .cycle {
+        padding: 50px 40px;
+        &-card{
+            width: 250px;
+        }
+    }
+  }
+
 @media only screen and (max-width: 1065px) {
   .description {
     &-image {
@@ -265,6 +302,15 @@
     padding: 50px 20px;
   }
 }
+
+@media only screen and (max-width: 600px) {
+    .cycle {
+        padding: 50px 20px;
+        &-card{
+            width: 90%;
+        }
+    }
+  }
 
 @media only screen and (max-width: 640px) {
   .description {

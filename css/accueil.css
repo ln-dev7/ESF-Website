@@ -479,6 +479,8 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: rgba(39, 45, 78, 0.04);
+  clip-path: ellipse(150% 100% at 50% 100%);
 }
 .cycle-title {
   font-size: 35px;
@@ -492,31 +494,57 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .cycle-card:nth-child(1) {
   background: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangle 2590.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .cycle-card:nth-child(1):hover {
   background: linear-gradient(180deg, rgba(39, 45, 78, 0.16) 0%, #27ae60 100%), url("/images/Rectangle 2590.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .cycle-card:nth-child(2) {
   background: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangle 2590.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .cycle-card:nth-child(2):hover {
   background: linear-gradient(180deg, rgba(39, 45, 78, 0.16) 0%, #27ae60 100%), url("/images/Rectangle 2590.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .cycle-card:nth-child(3) {
   background: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .cycle-card:nth-child(3):hover {
   background: linear-gradient(180deg, rgba(39, 45, 78, 0.16) 0%, #27ae60 100%), url("/images/Rectangle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .cycle-card:nth-child(4) {
   background: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangle 252.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .cycle-card:nth-child(4):hover {
   background: linear-gradient(180deg, rgba(39, 45, 78, 0.16) 0%, #27ae60 100%), url("/images/Rectangle 252.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .cycle-card {
   width: 300px;
@@ -577,6 +605,14 @@ body::-webkit-scrollbar-thumb {
     width: 200px;
   }
 }
+@media only screen and (max-width: 1030px) {
+  .cycle {
+    padding: 50px 40px;
+  }
+  .cycle-card {
+    width: 250px;
+  }
+}
 @media only screen and (max-width: 1065px) {
   .description-image {
     min-width: 40%;
@@ -593,6 +629,14 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (max-width: 970px) {
   .description {
     padding: 50px 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .cycle {
+    padding: 50px 20px;
+  }
+  .cycle-card {
+    width: 90%;
   }
 }
 @media only screen and (max-width: 640px) {
