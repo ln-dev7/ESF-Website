@@ -44,6 +44,79 @@
   }
   &-bottom {
     background: #fcfcfc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 30px;
+    &-logo {
+      color: $green;
+      font-weight: 800;
+      font-size: 18px;
+    }
+    &-links {
+      width: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      li {
+        a {
+          color: $indigo;
+          font-weight: 600;
+        }
+        .arrow {
+          &::after {
+            display: inline-block;
+            margin-left: 0.255em;
+            vertical-align: 0.255em;
+            content: "";
+            border-top: 0.3em solid;
+            border-right: 0.3em solid transparent;
+            border-bottom: 0;
+            border-left: 0.3em solid transparent;
+          }
+          &.active + .links-items {
+            display: block;
+          }
+        }
+      }
+      .links-items {
+          position: absolute;
+        background: $white;
+        border-radius: 5px;
+        border: 1px solid rgba($color: $gray, $alpha: 0.4);
+        padding: 5px 0;
+        display: none;
+        li {
+          margin: 3px 0;
+          padding: 5px;
+          transition: background 0.3s ease;
+          a {
+            font-weight: 400;
+            width: 100%;
+            height: 100%;
+          }
+          &:hover {
+            background: rgba($color: $indigo, $alpha: 0.04);
+          }
+        }
+      }
+    }
+    &-search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .btn-join {
+        background: $green;
+        color: $white;
+        padding: 10px 14px 8px 14px;
+        border-radius: 5px;
+        font-weight: 700;
+      }
+      img {
+        cursor: pointer;
+        margin-left: 20px;
+      }
+    }
   }
 }
 
@@ -71,15 +144,14 @@
 }
 
 @media only screen and (max-width: 420px) {
-    .header {
-      &-top {
-        &-contact {
-            flex-direction: column;
-            a{
-                margin-bottom: 5px;
-            }
+  .header {
+    &-top {
+      &-contact {
+        flex-direction: column;
+        a {
+          margin-bottom: 5px;
         }
       }
     }
   }
-  
+}
