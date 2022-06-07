@@ -365,11 +365,11 @@ body::-webkit-scrollbar-thumb {
     flex-wrap: wrap;
   }
   .footer-center {
-    margin: 0 20px;
+    margin: 0 20px 20px 20px;
   }
 }
 @media only screen and (max-width: 540px) {
   .footer-center {
-    margin: 0px;
+    margin: 0 20px 20px 0;
   }
 }
