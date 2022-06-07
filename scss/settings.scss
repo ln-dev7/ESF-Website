@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$green: #27AE60;
+$gray: #94A2B3;
+$indigo: #272D4E;
+$white: #FFF;
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+    color: rgba($color: $indigo, $alpha: .8);
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+ 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    position: relative;
+    background-color: $white;
+    transition: background-color .3s ease;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  background: none;
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $indigo;
+  border-radius: 10px;
+}
