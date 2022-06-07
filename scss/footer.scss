@@ -1,1 +1,89 @@
-@import 'settings';
+@import "settings";
+
+.footer {
+  background: $indigo;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 40px 20px 40px;
+  &-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    img {
+      width: 175px;
+      margin-bottom: 15px;
+    }
+    h5 {
+      color: $gray;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+  }
+  &-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    h3 {
+      color: $white;
+      font-size: 16px;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    a {
+      color: $gray;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    h3 {
+      color: $white;
+      font-size: 16px;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+      img {
+      }
+      span {
+        color: $gray;
+        margin-left: 5px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 760px){
+    .footer{
+        flex-wrap: wrap;
+        &-center{
+            margin: 0 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 540px){
+    .footer{
+        &-center{
+            margin: 0px;
+        }
+    }
+}
