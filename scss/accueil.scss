@@ -1,2 +1,66 @@
-@import 'header';
-@import 'footer';
+@import "header";
+@import "footer";
+
+.home {
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
+    url("/images/Intersect.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 100px;
+
+  h1{
+      margin-bottom: 20px;
+      font-weight: 800;
+      font-size: 50px;
+      line-height: 55px;
+      color: $white;
+  }
+
+  &-links{
+      display: flex;
+      justify-content: center;  
+      align-items: center;
+    a {
+        padding: 10px 14px 8px 14px;
+        border-radius: 5px;
+        font-weight: 700;
+        color: $white;
+      }
+      .link-more {
+        background: #ffffff52;
+        margin-right: 10px;
+      }
+      .link-subscribe {
+        background: $green;
+      }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+    .home{
+        h1{
+            font-size: 30px;
+            line-height: 35px;
+        }
+        &-links{
+            flex-direction: column;
+            align-items: flex-start;
+            .link-subscribe {
+                margin-top: 10px;
+                margin-right: 0;
+              }
+        }
+    }
+  }
+    
