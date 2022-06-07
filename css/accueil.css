@@ -182,6 +182,7 @@ body::-webkit-scrollbar-thumb {
     align-items: flex-start;
     justify-content: flex-start;
     background: #FFF;
+    z-index: 5;
     width: 80%;
     padding-left: 30px;
     padding-top: 50px;
@@ -469,6 +470,85 @@ body::-webkit-scrollbar-thumb {
 .description-text .seemore img {
   width: 18px;
   margin-left: 5px;
+}
+
+/* THIRD SECTION */
+.cycle {
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.cycle-title {
+  font-size: 35px;
+  text-align: center;
+  font-weight: 800;
+  line-height: 55px;
+  color: #272D4E;
+  margin-bottom: 20px;
+}
+.cycle-cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cycle-card:nth-child(1) {
+  background: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangle 2590.png");
+}
+.cycle-card:nth-child(1):hover {
+  background: linear-gradient(180deg, rgba(39, 45, 78, 0.16) 0%, #27ae60 100%), url("/images/Rectangle 2590.png");
+}
+.cycle-card:nth-child(2) {
+  background: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangle 2590.png");
+}
+.cycle-card:nth-child(2):hover {
+  background: linear-gradient(180deg, rgba(39, 45, 78, 0.16) 0%, #27ae60 100%), url("/images/Rectangle 2590.png");
+}
+.cycle-card:nth-child(3) {
+  background: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangle.png");
+}
+.cycle-card:nth-child(3):hover {
+  background: linear-gradient(180deg, rgba(39, 45, 78, 0.16) 0%, #27ae60 100%), url("/images/Rectangle.png");
+}
+.cycle-card:nth-child(4) {
+  background: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangle 252.png");
+}
+.cycle-card:nth-child(4):hover {
+  background: linear-gradient(180deg, rgba(39, 45, 78, 0.16) 0%, #27ae60 100%), url("/images/Rectangle 252.png");
+}
+.cycle-card {
+  width: 300px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+.cycle-card h2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  margin-bottom: 20px;
+  color: #FFF;
+  transition: transform 0.3s ease;
+  transform: translateY(0px);
+}
+.cycle-card a {
+  padding: 10px 14px 8px 14px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: #27AE60;
+  background: #FFF;
+  transition: transform 0.3s ease;
+  transform: translateY(50px);
+}
+.cycle-card:hover a,
+.cycle-card:hover h2 {
+  transform: translateY(-50px);
 }
 
 /* MAP */
