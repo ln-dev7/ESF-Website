@@ -49,7 +49,7 @@
     align-items: center;
     padding: 13px 30px;
     &-logo {
-        width: 175px;
+        width: 125px;
     }
     &-links {
       width: 60%;
@@ -60,6 +60,7 @@
         a {
           color: $indigo;
           font-weight: 600;
+          font-size: 17px;;
           &.active {
             color: $green;
           }
