@@ -1,0 +1,91 @@
+@import "header";
+@import "footer";
+
+.head {
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
+    url("/images/Rectangles.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  h1 {
+    margin-left: 40px;
+    padding: 0 10px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 55px;
+    color: $white;
+  }
+}
+
+main {
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (max-width: 640px) {
+    padding: 50px 20px;
+  }
+  @media screen and (max-width: 420px) {
+    padding: 50px 10px;
+  }
+  .medias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    &-card {
+      margin: 0;
+      width: calc(50% - 10px);
+      height: 300px;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    .medias {
+      gap: 10px;
+      &-card {
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+    main {
+      .medias {
+        &-card {
+          margin: 0;
+          width: 100%;
+          height: auto;
+          iframe {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
