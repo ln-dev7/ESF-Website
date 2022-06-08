@@ -80,14 +80,14 @@
         &-text {
           p {
             font-weight: 400;
-            line-height: 30px;
+            line-height: 40px;
             font-size: 18px;
             margin-bottom: 20px;
           }
           h3 {
             font-weight: 600;
             color: $indigo;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
           }
           div {
             display: flex;
@@ -125,8 +125,8 @@
       .answer {
         padding: 20px 10px;
         @media screen and (max-width: 420px) {
-            margin: 0 10px;
-            padding: 20px 5px;
+          margin: 0 10px;
+          padding: 20px 5px;
         }
         height: auto;
       }
@@ -135,26 +135,27 @@
 }
 
 @media screen and (max-width: 820px) {
-    .main {
-      .cards{
-          .faq-card{
-              .answer{
-                  flex-direction: column;
-                  &-image{
-                      margin: 0;
-                      //width: 100%;
-                  }
-                  &-text{
-                      margin: 15px 0;
-                      p{
-                          font-size: 16px;
-                      }
-                  }
-              }
+  .main {
+    .cards {
+      .faq-card {
+        .answer {
+          flex-direction: column;
+          &-image {
+            margin: 0;
+            //width: 100%;
           }
+          &-text {
+            margin: 15px 0;
+            p {
+              font-size: 16px;
+              line-height: 35px;
+            }
+          }
+        }
       }
     }
   }
+}
 
 @media screen and (max-width: 460px) {
   .head {
