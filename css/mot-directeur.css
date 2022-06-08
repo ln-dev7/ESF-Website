@@ -386,7 +386,8 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
 }
 .head h1 {
-  margin-left: 50px;
+  margin-left: 40px;
+  padding: 0 10px;
   font-weight: 800;
   font-size: 40px;
   line-height: 55px;
@@ -406,6 +407,11 @@ body::-webkit-scrollbar-thumb {
 .main-head-text {
   margin-right: 50px;
 }
+@media screen and (max-width: 960px) {
+  .main-head-text img {
+    width: 30px;
+  }
+}
 .main-head-text h3 {
   color: #94A2B3;
   font-size: 24px;
@@ -413,11 +419,33 @@ body::-webkit-scrollbar-thumb {
   line-height: 35px;
   margin: 15px 0;
 }
+@media screen and (max-width: 960px) {
+  .main-head-text h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .main-head-text h3 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
 .main-head-text h2 {
   position: relative;
   color: #27AE60;
   font-weight: 600;
   padding-left: 30px;
+}
+@media screen and (max-width: 960px) {
+  .main-head-text h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .main-head-text h2 {
+    font-size: 17px;
+  }
 }
 .main-head-text h2::before {
   position: absolute;
@@ -430,7 +458,7 @@ body::-webkit-scrollbar-thumb {
   background: #27AE60;
 }
 .main-head-image {
-  width: 500px;
+  width: clamp(150px, 40%, 500px);
 }
 .main-body {
   padding: 40px 15px;
@@ -444,12 +472,14 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 20px;
 }
 .main-body div h2 {
   position: relative;
   color: #272D4E;
   font-weight: 600;
+  margin-bottom: 10px;
 }
 .main-body div h2:last-child {
   color: #27AE60;
@@ -465,4 +495,40 @@ body::-webkit-scrollbar-thumb {
   width: 25px;
   height: 2px;
   background: #27AE60;
+}
+
+@media screen and (max-width: 760px) {
+  .main-head {
+    flex-direction: column-reverse;
+  }
+}
+@media screen and (max-width: 620px) {
+  .main {
+    padding: 60px 20px;
+  }
+  .main-head {
+    flex-direction: column-reverse;
+    padding: 15px;
+  }
+  .main-head-text {
+    margin-right: 0;
+  }
+  .main-body p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .main-body h2 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 460px) {
+  .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .head h1 {
+    margin: 0;
+    text-align: center;
+  }
 }
