@@ -237,6 +237,56 @@
   }
 }
 
+.medias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  // grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-areas:
+    "one two three"
+    "four five six";
+  &-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+      color: $white;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 35px;
+      margin-bottom: 10px;
+    }
+    h4,
+    a {
+      color: $white;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-card:nth-child(1) {
+    grid-area: one;
+    background: $indigo;
+  }
+  &-card:nth-child(2) {
+    grid-area: two;
+  }
+  &-card:nth-child(3) {
+    grid-area: three;
+  }
+  &-card:nth-child(4) {
+    grid-area: four;
+  }
+  &-card:nth-child(5) {
+    grid-area: five;
+  }
+  &-card:nth-child(6) {
+    grid-area: six;
+    background: $green;
+  }
+}
+
 .socials {
   padding: 50px 100px;
   display: flex;
@@ -349,12 +399,33 @@
   }
 }
 
+@media only screen and (max-width: 900px) {
+  .medias {
+    grid-template-areas:
+      "one two"
+      "three four"
+      "five six";
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .cycle {
     padding: 50px 20px;
     &-card {
       width: 90%;
     }
+  }
+  .medias {
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five"
+      "six";
+      &-card:nth-child(1), &-card:nth-child(6){
+          padding: 40px 0;
+      }
   }
   .socials {
     padding: 50px 20px;
