@@ -252,21 +252,21 @@
 }
 
 .why {
-    display: flex;
-    justify-content: flex-start;
-    padding: 50px 100px;
+  display: flex;
+  justify-content: flex-start;
+  padding: 50px 100px;
   &-text {
-      margin-right: 20px;
-      h1 {
-        font-size: 35px;
-        font-weight: 800;
-        line-height: 55px;
-        color: $indigo;
-        margin-bottom: 20px;
-        @media screen and (max-width: 460px) {
-          font-size: 25px;
-          line-height: 35px;
-        }
+    margin-right: 20px;
+    h1 {
+      font-size: 35px;
+      font-weight: 800;
+      line-height: 55px;
+      color: $indigo;
+      margin-bottom: 20px;
+      @media screen and (max-width: 460px) {
+        font-size: 25px;
+        line-height: 35px;
+      }
     }
     p {
       font-size: 17px;
@@ -280,35 +280,35 @@
     grid-template-areas:
       "one two"
       "three four";
-      grid-gap: 10px;
+    grid-gap: 10px;
   }
-  &-card{
+  &-card {
+    display: flex;
+    align-items: flex-start;
+    button {
       display: flex;
-      align-items: flex-start;
-      button{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border: 2px solid $green;
-          border-radius: 4px;
-          color: $green;
-          font-weight: 600;
-          background: $white;
-          padding: 10px;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid $green;
+      border-radius: 4px;
+      color: $green;
+      font-weight: 600;
+      background: $white;
+      padding: 10px;
+    }
+    &-text {
+      margin-left: 10px;
+      h3 {
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: $green;
       }
-      &-text{
-          margin-left: 10px;
-          h3{
-              font-weight: 600;
-              margin-bottom: 5px;
-              color: $green;
-          }
-          p{
-              font-size: 15px;
-              font-weight: 400;
-              color: rgba($color: $indigo, $alpha: 0.8);
-          }
+      p {
+        font-size: 15px;
+        font-weight: 400;
+        color: rgba($color: $indigo, $alpha: 0.8);
       }
+    }
   }
   &-card:nth-child(1) {
     grid-area: one;
@@ -325,12 +325,11 @@
 }
 
 .events {
-  position: relative;
-  padding: 50px 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   &-title {
     font-size: 35px;
     text-align: center;
@@ -341,6 +340,82 @@
     @media screen and (max-width: 460px) {
       font-size: 25px;
       line-height: 35px;
+    }
+  }
+  &-cards {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    .cards-image {
+      // position: absolute;
+      left: 0;
+      width: 300px;
+      height: 300px;
+      max-width: 100%;
+    }
+  }
+  &-card {
+    background: $white;
+    width: 300px;
+    max-width: 100%;
+    box-shadow: 0px 6px 60px rgba(39, 45, 78, 0.06);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    button {
+      padding: 10px 14px 8px;
+      background: $white;
+      border-radius: 4px;
+      border: 2px solid $green;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    h2{
+        color: $indigo;
+        font-weight: 600;
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        span{
+            margin-left: 10px;
+            font-size: 14px;
+            font-weight: 400;
+            color: $gray;
+        }
+    }
+  }
+  &-card.next {
+    button {
+      background: $green;
+      border-color: $green;
+      color: $white;
+    }
+    a{
+        span{
+            color: $green;
+        }
+    }
+  }
+  &-card.now {
+    button {
+      border-color: $green;
+      color: $green;
+    }
+  }
+  &-card.prev {
+    button {
+      border-color: #eb5757;
+      color: #eb5757;
     }
   }
 }
@@ -659,10 +734,10 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .why {
-        flex-direction: column;
-    }
+  .why {
+    flex-direction: column;
   }
+}
 
 @media only screen and (max-width: 600px) {
   .cycle {
@@ -725,13 +800,13 @@
 }
 
 @media only screen and (max-width: 420px) {
-    .why {
-      &-cards{
-        grid-template-areas:
+  .why {
+    &-cards {
+      grid-template-areas:
         "one"
         "two"
         "three"
         "four";
-      }
     }
   }
+}

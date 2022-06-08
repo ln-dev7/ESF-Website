@@ -673,7 +673,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .events {
-  position: relative;
   padding: 50px 100px;
   display: flex;
   justify-content: center;
@@ -693,6 +692,73 @@ body::-webkit-scrollbar-thumb {
     font-size: 25px;
     line-height: 35px;
   }
+}
+.events-cards {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.events-cards .cards-image {
+  left: 0;
+  width: 300px;
+  height: 300px;
+  max-width: 100%;
+}
+.events-card {
+  background: #FFF;
+  width: 300px;
+  max-width: 100%;
+  box-shadow: 0px 6px 60px rgba(39, 45, 78, 0.06);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+.events-card button {
+  padding: 10px 14px 8px;
+  background: #FFF;
+  border-radius: 4px;
+  border: 2px solid #27AE60;
+  font-weight: 600;
+  cursor: pointer;
+}
+.events-card h2 {
+  color: #272D4E;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0;
+}
+.events-card a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.events-card a span {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #94A2B3;
+}
+.events-card.next button {
+  background: #27AE60;
+  border-color: #27AE60;
+  color: #FFF;
+}
+.events-card.next a span {
+  color: #27AE60;
+}
+.events-card.now button {
+  border-color: #27AE60;
+  color: #27AE60;
+}
+.events-card.prev button {
+  border-color: #eb5757;
+  color: #eb5757;
 }
 
 .actu {
