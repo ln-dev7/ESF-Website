@@ -1,0 +1,132 @@
+@import "header";
+@import "footer";
+
+.head {
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
+    url("/images/Rectangles.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  h1 {
+    margin-left: 40px;
+    padding: 0 10px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 55px;
+    color: $white;
+  }
+}
+
+.main {
+  .cards {
+    background: rgba($color: $indigo, $alpha: 0.04);
+    padding: 50px 100px;
+    @media screen and (max-width: 760px) {
+      padding: 50px 20px;
+    }
+    .faq-card {
+      background: $white;
+      margin-bottom: 15px;
+      .question {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $white;
+        padding: 10px;
+        border-radius: 5px;
+        h3 {
+          font-weight: 800;
+          color: $indigo;
+        }
+        img {
+          transform: rotate(0deg);
+          cursor: pointer;
+          transition: transform 0.3s ease;
+        }
+      }
+      .answer {
+        overflow: hidden;
+        height: 0;
+        box-shadow: 0px 6px 60px rgba(39, 45, 78, 0.06);
+        transition: 0.3s ease;
+        p {
+          color: $indigo;
+          font-weight: 400;
+          line-height: 28px;
+          a {
+            color: $green;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .faq-card:nth-child(2) {
+      .answer {
+        table {
+          width: 100%;
+          td,
+          th {
+            border: 1px solid rgba($color: $indigo, $alpha: 0.1);
+            text-align: left;
+            padding: 8px;
+            color: $indigo;
+          }
+          th {
+            font-weight: 700;
+          }
+        }
+        div {
+          background: #f2cece;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          margin: 20px 10px;
+          padding: 15px;
+          span {
+            color: #dc3545;
+            font-weight: 700;
+            font-size: 20px;
+          }
+          h5 {
+            color: $indigo;
+            font-weight: 400;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .faq-card.show {
+      .question {
+        h3 {
+          color: $green;
+        }
+        img {
+          transform: rotate(180deg);
+          cursor: pointer;
+        }
+      }
+      .answer {
+        padding: 10px;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
