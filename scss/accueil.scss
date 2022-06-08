@@ -102,7 +102,7 @@
 
 /* THIRD SECTION */
 .cycle {
-    position: relative;
+  position: relative;
   padding: 50px 100px;
   display: flex;
   justify-content: center;
@@ -110,19 +110,19 @@
   flex-direction: column;
   background: rgba(39, 45, 78, 0.04);
   clip-path: ellipse(150% 100% at 50% 100%);
-  .ellipse{
-      position: absolute;
-      width: 150px;
-      z-index: -1;
+  .ellipse {
+    position: absolute;
+    width: 150px;
+    z-index: -1;
   }
-  .ellipse-1{
+  .ellipse-1 {
     top: 40px;
     left: 100px;
   }
-  .ellipse-2{
+  .ellipse-2 {
     right: 100px;
     bottom: 30px;
-}
+  }
   &-title {
     font-size: 35px;
     text-align: center;
@@ -251,6 +251,100 @@
   }
 }
 
+.why {
+    display: flex;
+    justify-content: flex-start;
+    padding: 50px 100px;
+  &-text {
+      margin-right: 20px;
+      h1 {
+        font-size: 35px;
+        font-weight: 800;
+        line-height: 55px;
+        color: $indigo;
+        margin-bottom: 20px;
+        @media screen and (max-width: 460px) {
+          font-size: 25px;
+          line-height: 35px;
+        }
+    }
+    p {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 30px;
+      margin-bottom: 20px;
+    }
+  }
+  &-cards {
+    display: grid;
+    grid-template-areas:
+      "one two"
+      "three four";
+      grid-gap: 10px;
+  }
+  &-card{
+      display: flex;
+      align-items: flex-start;
+      button{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 2px solid $green;
+          border-radius: 4px;
+          color: $green;
+          font-weight: 600;
+          background: $white;
+          padding: 10px;
+      }
+      &-text{
+          margin-left: 10px;
+          h3{
+              font-weight: 600;
+              margin-bottom: 5px;
+              color: $green;
+          }
+          p{
+              font-size: 15px;
+              font-weight: 400;
+              color: rgba($color: $indigo, $alpha: 0.8);
+          }
+      }
+  }
+  &-card:nth-child(1) {
+    grid-area: one;
+  }
+  &-card:nth-child(2) {
+    grid-area: two;
+  }
+  &-card:nth-child(3) {
+    grid-area: three;
+  }
+  &-card:nth-child(4) {
+    grid-area: four;
+  }
+}
+
+.events {
+  position: relative;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &-title {
+    font-size: 35px;
+    text-align: center;
+    font-weight: 800;
+    line-height: 55px;
+    color: $indigo;
+    margin-bottom: 20px;
+    @media screen and (max-width: 460px) {
+      font-size: 25px;
+      line-height: 35px;
+    }
+  }
+}
+
 .actu {
   padding: 50px 100px;
   display: flex;
@@ -290,29 +384,29 @@
     }
   }
   &-cards {
-      overflow-x: hidden;
-      width: 100%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      .arrow{
-          width: 40px;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          cursor: pointer;
-          background: $white;
-          border-radius: 4px;
-          border: 3px solid $indigo;
-          z-index: 2;
-      }
-      .arrow-left{
-        left: 0;
-      }
-      .arrow-right{
-          right: 0;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .arrow {
+      width: 40px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      background: $white;
+      border-radius: 4px;
+      border: 3px solid $indigo;
+      z-index: 2;
+    }
+    .arrow-left {
+      left: 0;
+    }
+    .arrow-right {
+      right: 0;
     }
     .card {
       width: 350px;
@@ -508,6 +602,12 @@
       width: 250px;
     }
   }
+  .why {
+    padding: 50px 40px;
+  }
+  .events {
+    padding: 50px 40px;
+  }
   .socials {
     padding: 50px 40px;
   }
@@ -538,6 +638,12 @@
   .description {
     padding: 50px 20px;
   }
+  .why {
+    padding: 50px 20px;
+  }
+  .events {
+    padding: 50px 20px;
+  }
   .actu {
     padding: 50px 20px;
   }
@@ -551,6 +657,12 @@
       "five six";
   }
 }
+
+@media only screen and (max-width: 800px) {
+    .why {
+        flex-direction: column;
+    }
+  }
 
 @media only screen and (max-width: 600px) {
   .cycle {
@@ -611,3 +723,15 @@
     }
   }
 }
+
+@media only screen and (max-width: 420px) {
+    .why {
+      &-cards{
+        grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four";
+      }
+    }
+  }
