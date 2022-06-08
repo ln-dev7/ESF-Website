@@ -1,0 +1,121 @@
+@import "header";
+@import "footer";
+
+.head {
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
+    url("/images/Rectangles.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  h1 {
+    margin-left: 40px;
+    padding: 0 10px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 55px;
+    color: $white;
+  }
+}
+
+.main {
+  position: relative;
+  margin-top: 50px;
+  padding: 50px 50px;
+  background: rgba($color: $indigo, $alpha: 0.04);
+  @media screen and (max-width: 510px) {
+      padding: 50px 15px;
+  }
+
+  &-head {
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 50px;
+    margin: 0 50px;
+    @media screen and (max-width: 1020px) {
+        margin: 0;
+    }
+    @media screen and (max-width: 740px) {
+        flex-direction: column;
+    }
+    img {
+      min-width: 50%;
+    }
+    .head-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 300px;
+      padding: 50px;
+      background: $white;
+      box-shadow: 20px 20px 100px rgba(39, 45, 78, 0.06);
+      @media screen and (max-width: 420px) {
+          padding: 20px;
+          height: auto;
+    }
+      h1 {
+        width: 100%;
+        text-align: left;
+        color: $indigo;
+        font-weight: 800;
+        font-size: 40px;
+        margin-bottom: 20px;
+        @media screen and (max-width: 1020px) {
+            font-size: 30px;
+        }
+      }
+      p {
+        line-height: 30px;
+        @media screen and (max-width: 420px) {
+            line-height: 25px;
+      }
+      }
+    }
+  }
+  &-cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .main-card {
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 15px;
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $green;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        color: $green;
+        font-weight: 600;
+        background: $white;
+        padding: 10px;
+      }
+      p {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}

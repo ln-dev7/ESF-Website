@@ -75,17 +75,17 @@ main {
 }
 
 @media screen and (max-width: 420px) {
-    main {
-      .medias {
-        &-card {
-          margin: 0;
+  main {
+    .medias {
+      &-card {
+        margin: 0;
+        width: 100%;
+        height: auto;
+        iframe {
           width: 100%;
-          height: auto;
-          iframe {
-            width: 100%;
-            height: 100%;
-          }
+          height: 100%;
         }
       }
     }
   }
+}
