@@ -102,6 +102,7 @@
 
 /* THIRD SECTION */
 .cycle {
+    position: relative;
   padding: 50px 100px;
   display: flex;
   justify-content: center;
@@ -109,6 +110,19 @@
   flex-direction: column;
   background: rgba(39, 45, 78, 0.04);
   clip-path: ellipse(150% 100% at 50% 100%);
+  .ellipse{
+      position: absolute;
+      width: 150px;
+      z-index: -1;
+  }
+  .ellipse-1{
+    top: 40px;
+    left: 100px;
+  }
+  .ellipse-2{
+    right: 100px;
+    bottom: 30px;
+}
   &-title {
     font-size: 35px;
     text-align: center;
@@ -232,6 +246,130 @@
       a,
       h2 {
         transform: translateY(-50px);
+      }
+    }
+  }
+}
+
+.actu {
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    h1 {
+      font-size: 35px;
+      text-align: center;
+      font-weight: 800;
+      line-height: 55px;
+      color: $indigo;
+      @media screen and (max-width: 460px) {
+        font-size: 25px;
+        line-height: 35px;
+      }
+    }
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-size: 16px;
+        font-weight: 700;
+        color: $green;
+      }
+      img {
+        width: 20px;
+        margin-left: 5px;
+      }
+    }
+  }
+  &-cards {
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      .arrow{
+          width: 40px;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          cursor: pointer;
+          background: $white;
+          border-radius: 4px;
+          border: 3px solid $indigo;
+          z-index: 2;
+      }
+      .arrow-left{
+        left: 0;
+      }
+      .arrow-right{
+          right: 0;
+    }
+    .card {
+      width: 350px;
+      max-width: 100%;
+      flex-shrink: 0;
+      // max-width: 100%;
+      background: $white;
+      box-shadow: 2px 20px 30px rgba(39, 45, 78, 0.06);
+      border-radius: 4px;
+      overflow: hidden;
+      &-head {
+        width: 100%;
+        position: relative;
+        height: 250px;
+        background: linear-gradient(
+            180deg,
+            rgba(39, 45, 78, 0) 0%,
+            rgba(39, 45, 78, 0.32) 100%
+          ),
+          url(/images/Rectangle\ 280.png);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        button {
+          margin-left: 15px;
+          margin-bottom: 15px;
+          background: $white;
+          border: none;
+          padding: 10px 14px 8px 14px;
+          border-radius: 4px;
+          font-size: 16px;
+          font-weight: 700;
+          color: $green;
+        }
+      }
+      &-body {
+        padding: 20px;
+        h2 {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 25px;
+          color: $indigo;
+          margin-bottom: 20px;
+        }
+        .body-date {
+          border-top: 1px solid rgba($color: $gray, $alpha: 0.15);
+          padding-top: 15px;
+          display: flex;
+          align-items: center;
+          span {
+            font-size: 15px;
+            font-weight: 700;
+            color: $gray;
+            margin-left: 10px;
+          }
+        }
       }
     }
   }
@@ -373,6 +511,9 @@
   .socials {
     padding: 50px 40px;
   }
+  .actu {
+    padding: 50px 40px;
+  }
 }
 
 @media only screen and (max-width: 1065px) {
@@ -395,6 +536,9 @@
 
 @media only screen and (max-width: 970px) {
   .description {
+    padding: 50px 20px;
+  }
+  .actu {
     padding: 50px 20px;
   }
 }
@@ -423,9 +567,10 @@
       "four"
       "five"
       "six";
-      &-card:nth-child(1), &-card:nth-child(6){
-          padding: 40px 0;
-      }
+    &-card:nth-child(1),
+    &-card:nth-child(6) {
+      padding: 40px 0;
+    }
   }
   .socials {
     padding: 50px 20px;

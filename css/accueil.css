@@ -474,6 +474,7 @@ body::-webkit-scrollbar-thumb {
 
 /* THIRD SECTION */
 .cycle {
+  position: relative;
   padding: 50px 100px;
   display: flex;
   justify-content: center;
@@ -481,6 +482,19 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   background: rgba(39, 45, 78, 0.04);
   clip-path: ellipse(150% 100% at 50% 100%);
+}
+.cycle .ellipse {
+  position: absolute;
+  width: 150px;
+  z-index: -1;
+}
+.cycle .ellipse-1 {
+  top: 40px;
+  left: 100px;
+}
+.cycle .ellipse-2 {
+  right: 100px;
+  bottom: 30px;
 }
 .cycle-title {
   font-size: 35px;
@@ -583,6 +597,126 @@ body::-webkit-scrollbar-thumb {
 .cycle-card:hover a,
 .cycle-card:hover h2 {
   transform: translateY(-50px);
+}
+
+.actu {
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.actu-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.actu-header h1 {
+  font-size: 35px;
+  text-align: center;
+  font-weight: 800;
+  line-height: 55px;
+  color: #272D4E;
+}
+@media screen and (max-width: 460px) {
+  .actu-header h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+}
+.actu-header a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.actu-header a span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #27AE60;
+}
+.actu-header a img {
+  width: 20px;
+  margin-left: 5px;
+}
+.actu-cards {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.actu-cards .arrow {
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: #FFF;
+  border-radius: 4px;
+  border: 3px solid #272D4E;
+  z-index: 2;
+}
+.actu-cards .arrow-left {
+  left: 0;
+}
+.actu-cards .arrow-right {
+  right: 0;
+}
+.actu-cards .card {
+  width: 350px;
+  max-width: 100%;
+  flex-shrink: 0;
+  background: #FFF;
+  box-shadow: 2px 20px 30px rgba(39, 45, 78, 0.06);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.actu-cards .card-head {
+  width: 100%;
+  position: relative;
+  height: 250px;
+  background: linear-gradient(180deg, rgba(39, 45, 78, 0) 0%, rgba(39, 45, 78, 0.32) 100%), url(/images/Rectangle\ 280.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+}
+.actu-cards .card-head button {
+  margin-left: 15px;
+  margin-bottom: 15px;
+  background: #FFF;
+  border: none;
+  padding: 10px 14px 8px 14px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #27AE60;
+}
+.actu-cards .card-body {
+  padding: 20px;
+}
+.actu-cards .card-body h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25px;
+  color: #272D4E;
+  margin-bottom: 20px;
+}
+.actu-cards .card-body .body-date {
+  border-top: 1px solid rgba(148, 162, 179, 0.15);
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+}
+.actu-cards .card-body .body-date span {
+  font-size: 15px;
+  font-weight: 700;
+  color: #94A2B3;
+  margin-left: 10px;
 }
 
 .medias {
@@ -710,6 +844,10 @@ body::-webkit-scrollbar-thumb {
   .socials {
     padding: 50px 40px;
   }
+
+  .actu {
+    padding: 50px 40px;
+  }
 }
 @media only screen and (max-width: 1065px) {
   .description-image {
@@ -726,6 +864,10 @@ body::-webkit-scrollbar-thumb {
 }
 @media only screen and (max-width: 970px) {
   .description {
+    padding: 50px 20px;
+  }
+
+  .actu {
     padding: 50px 20px;
   }
 }
