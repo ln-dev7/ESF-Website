@@ -61,9 +61,9 @@
           color: $indigo;
           font-weight: 600;
           font-size: 17px;;
-          &.active {
-            color: $green;
-          }
+        }
+        a.active {
+          color: $green;
         }
         .arrow {
           &::after {
