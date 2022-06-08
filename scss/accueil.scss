@@ -546,8 +546,9 @@
 
 .medias {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   // grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+
   grid-template-areas:
     "one two three"
     "four five six";
@@ -739,7 +740,7 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 530px) {
   .cycle {
     padding: 50px 20px;
     &-card {
@@ -754,6 +755,7 @@
       "four"
       "five"
       "six";
+      grid-row-gap: 10px;
     &-card:nth-child(1),
     &-card:nth-child(6) {
       padding: 40px 0;

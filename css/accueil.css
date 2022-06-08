@@ -883,7 +883,7 @@ body::-webkit-scrollbar-thumb {
 
 .medias {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-areas: "one two three" "four five six";
 }
 .medias-card {
@@ -1059,7 +1059,7 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 530px) {
   .cycle {
     padding: 50px 20px;
   }
@@ -1069,6 +1069,7 @@ body::-webkit-scrollbar-thumb {
 
   .medias {
     grid-template-areas: "one" "two" "three" "four" "five" "six";
+    grid-row-gap: 10px;
   }
   .medias-card:nth-child(1), .medias-card:nth-child(6) {
     padding: 40px 0;
