@@ -1,0 +1,181 @@
+@import "header";
+@import "footer";
+
+.head {
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
+    url("/images/Rectangles.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  h1 {
+    margin-left: 40px;
+    padding: 0 10px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 55px;
+    color: $white;
+  }
+}
+
+// padding: 50px;
+//   @media screen and (max-width: 760px) {
+//     padding: 50px 20px;
+//   }
+
+.main {
+  padding: 30px 100px;
+  @media screen and (max-width: 760px) {
+    padding: 30px 20px;
+  }
+  &-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &-card {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    .card-image {
+      min-width: 50%;
+      height: 500px;
+      justify-content: space-between;
+      display: flex;
+      align-items: flex-start;
+      border-radius: 5px;
+      h2 {
+        color: $white;
+        font-weight: 600;
+        padding: 20px 0 0 20px;
+      }
+    }
+    .card-text {
+      position: absolute;
+      right: 10%;
+      background: $white;
+      box-shadow: 20px 20px 100px rgba(39, 45, 78, 0.06);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding-left: 50px;
+      width: 600px;
+      height: 400px;
+      h3{
+          display: none;
+      }
+      h2 {
+        color: $green;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span {
+            color: $indigo;
+            font-weight: 500;
+            margin-left: 10px;
+          }
+          button {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 7px;
+            border-radius: 50%;
+            border: 2px solid $indigo;
+            background: $white;
+            color: $indigo;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  &-card:nth-child(1) {
+    .card-image {
+      background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
+        url("/images/Rectangle\ 2590.png");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  &-card:nth-child(2) {
+    flex-direction: row-reverse;
+    .card-text{
+        left: 10%;
+    }
+    .card-image {
+      justify-content: flex-end;
+      background-image: linear-gradient(to left, #272d4ebf, #272d4e00),
+        url("/images/Rectangle.png");
+      background-size: cover;
+      background-position: center;
+      h2 {
+        padding-right: 20px;
+      }
+    }
+  }
+  &-card:nth-child(3) {
+    .card-image {
+      background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
+        url("/images/Rectangle\ 252.png");
+      background-size: cover;
+      background-position: center;
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+    .main {
+        &-card{
+            position: relative;
+            .card-image{
+                display: none;
+            }
+            .card-text{
+                position: static;
+                left: 0;
+                right: 0;
+                padding: 50px 15px;
+                height: auto;
+                h3{
+                    display: block;
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                    color: $indigo;
+                    font-weight: 600;
+                    font-style: italic;
+                }
+            }
+        }
+    }
+  }
+
+@media screen and (max-width: 460px) {
+  .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
