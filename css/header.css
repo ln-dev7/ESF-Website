@@ -142,6 +142,7 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid rgba(148, 162, 179, 0.4);
   padding: 5px 0;
   display: none;
+  z-index: 2;
 }
 .header-bottom-links .links-items li {
   margin: 3px 0;
