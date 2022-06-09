@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;500;600;700;800;900&display=swap");
+*, ::before, ::after {
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  color: rgba(39, 45, 78, 0.8);
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  background-color: #FFF;
+  transition: background-color 0.3s ease;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  background: none;
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #272D4E;
+  border-radius: 10px;
+}
+
+.footer {
+  background: #272D4E;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 40px 20px 40px;
+}
+.footer-left {
+  width: 400px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.footer-left img {
+  width: 175px;
+  margin-bottom: 15px;
+}
+.footer-left h5 {
+  color: #94A2B3;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+}
+.footer-center {
+  width: 400px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-left: 50px;
+}
+.footer-center h3 {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.footer-center a {
+  color: #94A2B3;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.footer-right {
+  width: 400px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.footer-right h3 {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.footer-right a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.footer-right a span {
+  color: #94A2B3;
+  margin-left: 5px;
+  font-weight: 500;
+}
+.footer-right a:nth-child(2) {
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 760px) {
+  .footer {
+    flex-wrap: wrap;
+  }
+  .footer-center {
+    padding-left: 0;
+  }
+}
