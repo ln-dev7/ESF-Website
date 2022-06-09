@@ -1,0 +1,220 @@
+@import "header";
+@import "footer";
+
+.head {
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
+    url("/images/Rectangles.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  h1 {
+    margin-left: 40px;
+    padding: 0 10px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 55px;
+    color: $white;
+  }
+}
+
+.intro {
+  margin: 50px 100px 25px 100px;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px dotted #eb5757;
+  @media screen and (max-width: 760px) {
+    margin: 50px 20px;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 35px;
+    color: #eb5757;
+  }
+}
+
+.main {
+  &-cards {
+    padding: 20px 100px;
+    @media screen and (max-width: 760px) {
+      padding: 50px 20px;
+    }
+  }
+  &-card {
+      margin-bottom: 20px;
+    .card-title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $green;
+        border-radius: 4px;
+        color: $green;
+        font-weight: 600;
+        background: $white;
+        padding: 10px;
+      }
+      span {
+        margin-left: 10px;
+        font-size: 24px;
+        color: $green;
+        font-weight: 700;
+      }
+    }
+    .card-form {
+      grid-gap: 15px;
+      margin-top: 20px;
+      .card-input {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        label {
+          color: $indigo;
+          font-weight: 600;
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+        input,
+        select {
+          width: 100%;
+          outline: none;
+          background: rgba($color: $indigo, $alpha: 0.06);
+          border: 1px solid transparent;
+          border-radius: 4px;
+          padding: 10px;
+          color: $gray;
+          font-weight: 500;
+          font-size: 17px;
+          margin-bottom: 10px;
+          &:focus {
+            border-color: rgba($color: $indigo, $alpha: 0.1);
+          }
+        }
+      }
+    }
+  }
+  .send{
+      background: $green;
+      color: $white;
+    padding: 10px 14px 8px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+  .card-one{
+      .card-form{
+        display: grid;
+        grid-template-areas: "one one one" "two three four" "five six seven" "eight eight eight";
+        .card-input:nth-child(1) {
+            grid-area: one;
+          }
+          .card-input:nth-child(2) {
+            grid-area: two;
+          }
+          .card-input:nth-child(3) {
+            grid-area: three;
+          }
+          .card-input:nth-child(4) {
+            grid-area: four;
+          }
+          .card-input:nth-child(5) {
+            grid-area: five;
+          }
+          .card-input:nth-child(6) {
+            grid-area: six;
+          }
+          .card-input:nth-child(7) {
+            grid-area: seven;
+          }
+          .card-input:nth-child(8) {
+            grid-area: eight;
+          }
+      }
+  }
+  .card-two, .card-three{
+    .card-form{
+      display: grid;
+      grid-template-areas: "one one one" "two three four" "five six seven" "eight nine ten";
+      .card-input:nth-child(1) {
+          grid-area: one;
+        }
+        .card-input:nth-child(2) {
+          grid-area: two;
+        }
+        .card-input:nth-child(3) {
+          grid-area: three;
+        }
+        .card-input:nth-child(4) {
+          grid-area: four;
+        }
+        .card-input:nth-child(5) {
+          grid-area: five;
+        }
+        .card-input:nth-child(6) {
+          grid-area: six;
+        }
+        .card-input:nth-child(7) {
+          grid-area: seven;
+        }
+        .card-input:nth-child(8) {
+          grid-area: eight;
+        }
+        .card-input:nth-child(9) {
+            grid-area: nine;
+        }
+        .card-input:nth-child(10) {
+            grid-area: ten;
+        }
+    }
+}
+}
+
+@media screen and (max-width: 980px) {
+    .main{
+        &-cards{
+            .card-one{
+                .card-form{
+                    grid-template-areas: "one one" "two three" "four five" "six seven" "eight eight";
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .main{
+        &-cards{
+            .card-one{
+                .card-form{
+                    grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight";
+                }
+            }
+            .card-two, .card-three, .card-three{
+                .card-form{
+                    grid-template-areas: "one" "two" "three" "four" "five" "six" "seven" "eight" "nine" "ten";
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 460px) {
+  .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
