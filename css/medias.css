@@ -124,6 +124,19 @@ main h1 {
   grid-area: six;
   background: #27AE60;
 }
+.medias-card:nth-child(6) a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.medias-card:nth-child(6) a span {
+  color: #FFF;
+  font-weight: 400;
+}
+.medias-card:nth-child(6) a svg {
+  width: 20px;
+  margin-left: 5px;
+}
 
 @media only screen and (max-width: 900px) {
   .medias {

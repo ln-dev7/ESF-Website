@@ -130,4 +130,24 @@ body::-webkit-scrollbar-thumb {
   .footer-center {
     padding-left: 0;
   }
+  .footer-left, .footer-center, .footer-right {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-left h5, .footer-center h5, .footer-right h5 {
+    text-align: center;
+  }
+  .footer-left a, .footer-center a, .footer-right a {
+    flex-direction: column;
+  }
+  .footer-left a img, .footer-center a img, .footer-right a img {
+    margin-bottom: 5px;
+  }
+  .footer-left a span, .footer-center a span, .footer-right a span {
+    text-align: center;
+  }
+  .footer-left a:nth-child(2), .footer-center a:nth-child(2), .footer-right a:nth-child(2) {
+    align-items: center;
+  }
 }

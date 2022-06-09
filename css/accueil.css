@@ -46,45 +46,94 @@ body::-webkit-scrollbar-thumb {
 
 /* FIRST SECTION */
 .home {
+  position: relative;
   height: 75%;
-  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Intersect.png");
-  background-size: cover;
-  background-position: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  padding-left: 100px;
+  align-items: center;
 }
 @media screen and (max-width: 620px) {
   .home {
     height: 50%;
   }
 }
-.home h1 {
+.home-slider {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-slider .home-slide {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+  background: #94A2B3;
+  transition: 0.3s ease;
+}
+.home-slider .home-slide.active {
+  transform: scale(1.5);
+  background: #FFF;
+}
+.home-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-content {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 100px;
+  transition: 0.3s ease;
+}
+.home-content h1 {
   margin-bottom: 20px;
   font-weight: 800;
   font-size: 50px;
   line-height: 55px;
   color: #FFF;
 }
-.home-links {
+.home-content .home-links {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.home-links a {
+.home-content .home-links a {
   padding: 10px 14px 8px 14px;
   border-radius: 5px;
   font-weight: 700;
   color: #FFF;
 }
-.home-links .link-more {
+.home-content .home-links .link-more {
   background: #ffffff52;
   margin-right: 10px;
 }
-.home-links .link-subscribe {
+.home-content .home-links .link-subscribe {
   background: #27AE60;
+}
+.home-content-1 {
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangle 280.png");
+  background-size: cover;
+  background-position: center;
+}
+.home-content-2 {
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Intersect.png");
+  background-size: cover;
+  background-position: center;
+}
+.home-content-3 {
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangle 300.png");
+  background-size: cover;
+  background-position: center;
 }
 
 /* SECOND SECTION */
@@ -128,17 +177,29 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   border-radius: 4px;
   box-shadow: 100px 20px 250px rgba(39, 45, 78, 0.434);
-  padding: 15px;
+  padding: 20px;
   background: #FFF;
+  transition: 0.3s ease;
 }
 .description-text .seemore span {
   color: #27AE60;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 18px;
 }
-.description-text .seemore img {
-  width: 18px;
-  margin-left: 5px;
+.description-text .seemore svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+.description-text .seemore:hover {
+  background: #27AE60;
+  color: #FFF;
+}
+.description-text .seemore:hover span {
+  color: #FFF;
+}
+.description-text .seemore:hover svg path {
+  fill: #fff;
 }
 
 /* THIRD SECTION */
@@ -324,7 +385,8 @@ body::-webkit-scrollbar-thumb {
   color: #27AE60;
 }
 .why-card-text p {
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 25px;
   font-weight: 400;
   color: rgba(39, 45, 78, 0.8);
 }
@@ -473,12 +535,17 @@ body::-webkit-scrollbar-thumb {
 }
 .actu-cards {
   overflow-x: hidden;
-  width: 100%;
+  width: 85%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
+}
+@media screen and (max-width: 970px) {
+  .actu-cards {
+    width: 100%;
+  }
 }
 .actu-cards .arrow {
   width: 40px;
@@ -499,12 +566,12 @@ body::-webkit-scrollbar-thumb {
 }
 .actu-cards .card {
   width: 350px;
-  max-width: 100%;
   flex-shrink: 0;
   background: #FFF;
   box-shadow: 2px 20px 30px rgba(39, 45, 78, 0.06);
   border-radius: 4px;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 .actu-cards .card-head {
   width: 100%;
@@ -596,6 +663,19 @@ body::-webkit-scrollbar-thumb {
   grid-area: six;
   background: #27AE60;
 }
+.medias-card:nth-child(6) a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.medias-card:nth-child(6) a span {
+  color: #FFF;
+  font-weight: 400;
+}
+.medias-card:nth-child(6) a svg {
+  width: 20px;
+  margin-left: 5px;
+}
 
 .socials {
   padding: 50px 100px;
@@ -661,7 +741,7 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (max-width: 1100px) {
   .description-text .seemore {
     position: static;
-    width: 200px;
+    width: 250px;
   }
 }
 @media only screen and (max-width: 1030px) {
@@ -718,14 +798,44 @@ body::-webkit-scrollbar-thumb {
     padding: 50px 20px;
   }
 }
+@media only screen and (max-width: 960px) {
+  .why {
+    flex-direction: column;
+  }
+}
 @media only screen and (max-width: 900px) {
   .medias {
     grid-template-areas: "one two" "three four" "five six";
   }
 }
-@media only screen and (max-width: 800px) {
-  .why {
+@media only screen and (max-width: 640px) {
+  .description {
     flex-direction: column;
+  }
+  .description-image {
+    min-width: 40%;
+  }
+  .description-text {
+    padding: 20px 0 0 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .home-content {
+    padding-left: 20px;
+  }
+}
+@media only screen and (max-width: 620px) {
+  .home-content h1 {
+    font-size: 30px;
+    line-height: 35px;
+  }
+  .home-content .home-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .home-content .home-links .link-subscribe {
+    margin-top: 10px;
+    margin-right: 0;
   }
 }
 @media only screen and (max-width: 530px) {
@@ -748,37 +858,7 @@ body::-webkit-scrollbar-thumb {
     padding: 50px 20px;
   }
 }
-@media only screen and (max-width: 640px) {
-  .description {
-    flex-direction: column;
-  }
-  .description-image {
-    min-width: 40%;
-  }
-  .description-text {
-    padding: 20px 0 0 0;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .home {
-    padding-left: 20px;
-  }
-}
-@media only screen and (max-width: 620px) {
-  .home h1 {
-    font-size: 30px;
-    line-height: 35px;
-  }
-  .home-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .home-links .link-subscribe {
-    margin-top: 10px;
-    margin-right: 0;
-  }
-}
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 500px) {
   .why-cards {
     grid-template-areas: "one" "two" "three" "four";
   }

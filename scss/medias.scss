@@ -80,6 +80,19 @@ main{
   &-card:nth-child(6) {
     grid-area: six;
     background: $green;
+    a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span{
+        color: $white;
+        font-weight: 400;
+      }
+      svg{
+        width: 20px;
+        margin-left: 5px;
+      }
+    }
   }
 }
 
