@@ -1,0 +1,217 @@
+@import "header";
+@import "footer";
+
+.head {
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
+    url("/images/Rectangles.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  h1 {
+    margin-left: 40px;
+    padding: 0 10px;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 55px;
+    color: $white;
+  }
+}
+
+.intro {
+  margin: 50px 100px 25px 100px;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px dotted #eb5757;
+  @media screen and (max-width: 760px) {
+    margin: 50px 20px;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 35px;
+    color: #eb5757;
+  }
+}
+
+.main {
+  &-head {
+    border-radius: 4px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 50px;
+    margin: 30px 50px 0 50px;
+    @media screen and (max-width: 1020px) {
+      margin: 20px;
+    }
+    @media screen and (max-width: 740px) {
+      flex-direction: column;
+      padding-bottom: 0;
+    }
+    img {
+      width: 50%;
+      height: 400px;
+      object-fit: cover;
+      @media screen and (max-width: 740px) {
+          width: 100%;
+          height: auto;
+      }
+    }
+    .head-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 400px;
+      padding: 50px;
+      width: 50%;
+      background: $white;
+      box-shadow: 20px 20px 100px rgba(39, 45, 78, 0.06);
+      @media screen and (max-width: 740px) {
+        width: 100%;
+        height: auto;
+    }
+      @media screen and (max-width: 420px) {
+        padding: 20px;
+        height: auto;
+      }
+      h1 {
+        width: 100%;
+        text-align: left;
+        color: $indigo;
+        font-weight: 800;
+        font-size: 40px;
+        margin-bottom: 20px;
+        @media screen and (max-width: 1020px) {
+          font-size: 30px;
+        }
+      }
+      p {
+        line-height: 30px;
+        @media screen and (max-width: 420px) {
+          line-height: 25px;
+        }
+      }
+    }
+  }
+  &-cards {
+    padding: 20px 100px;
+    @media screen and (max-width: 760px) {
+      padding: 50px 20px;
+    }
+  }
+  &-card {
+    margin-bottom: 20px;
+    .card-title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid $green;
+        border-radius: 4px;
+        color: $green;
+        font-weight: 600;
+        background: $white;
+        padding: 10px;
+      }
+      span {
+        margin-left: 10px;
+        font-size: 20px;
+        color: $green;
+        font-weight: 700;
+      }
+    }
+    .card-form {
+      display: grid;
+      grid-template-areas: "one two" "three four" "five six";
+      .card-input:nth-child(1) {
+        grid-area: one;
+      }
+      .card-input:nth-child(2) {
+        grid-area: two;
+      }
+      .card-input:nth-child(3) {
+        grid-area: three;
+      }
+      .card-input:nth-child(4) {
+        grid-area: four;
+      }
+      .card-input:nth-child(5) {
+        grid-area: five;
+      }
+      .card-input:nth-child(6) {
+        grid-area: six;
+      }
+    }
+    .card-form {
+      grid-gap: 15px;
+      margin-top: 20px;
+      .card-input {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        label {
+          color: $indigo;
+          font-weight: 600;
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+        input,
+        select {
+          width: 100%;
+          outline: none;
+          background: rgba($color: $indigo, $alpha: 0.06);
+          border: 1px solid transparent;
+          border-radius: 4px;
+          padding: 10px;
+          color: $gray;
+          font-weight: 500;
+          font-size: 17px;
+          margin-bottom: 10px;
+          &:focus {
+            border-color: rgba($color: $indigo, $alpha: 0.1);
+          }
+        }
+      }
+    }
+  }
+  .send {
+    background: $green;
+    color: $white;
+    padding: 10px 14px 8px;
+    border-radius: 4px;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .main {
+    &-card {
+      .card-form {
+        grid-template-areas: "one" "two" "three" "four" "five" "six";
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}
