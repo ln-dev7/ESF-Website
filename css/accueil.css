@@ -84,6 +84,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .home-content {
   min-width: 100%;
