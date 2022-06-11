@@ -726,6 +726,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* RESPONSIVE */
+@media only screen and (max-width: 1470px) {
+  .events {
+    padding: 50px 10px;
+  }
+  .events-card {
+    width: 250px;
+  }
+}
 @media only screen and (max-width: 1440px) {
   .cycle {
     padding: 50px 10px;

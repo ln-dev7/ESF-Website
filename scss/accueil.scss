@@ -732,6 +732,15 @@
 
 /* RESPONSIVE */
 
+@media only screen and (max-width: 1470px) {
+  .events {
+    padding: 50px 10px;
+    &-card {
+      width: 250px;
+    }
+  }
+}
+
 @media only screen and (max-width: 1440px) {
   .cycle {
     padding: 50px 10px;
