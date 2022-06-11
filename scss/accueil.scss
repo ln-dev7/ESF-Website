@@ -48,7 +48,7 @@
     justify-content: center;
     align-items: flex-start;
     padding-left: 100px;
-    transition: .3s ease;
+    transition: 0.3s ease;
     // img {
     //   position: absolute;
     //   object-fit: cover;
@@ -732,6 +732,15 @@
 
 /* RESPONSIVE */
 
+@media only screen and (max-width: 1440px) {
+  .cycle {
+    padding: 50px 10px;
+    &-card {
+      width: 250px;
+    }
+  }
+}
+
 @media only screen and (max-width: 1285px) {
   .description {
     &-text {
@@ -759,13 +768,16 @@
   }
 }
 
-@media only screen and (max-width: 1030px) {
+@media only screen and (max-width: 1060px) {
   .cycle {
-    padding: 50px 40px;
+    padding: 50px 10px;
     &-card {
-      width: 250px;
+      width: 20%;
     }
   }
+}
+
+@media only screen and (max-width: 1030px) {
   .why {
     padding: 50px 40px;
   }
@@ -820,11 +832,25 @@
 }
 
 @media only screen and (max-width: 900px) {
+  .cycle {
+    padding: 50px 20px;
+    &-card {
+      width: 48%;
+    }
+  }
   .medias {
     grid-template-areas:
       "one two"
       "three four"
       "five six";
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    &-content {
+      padding-left: 20px;
+    }
   }
 }
 
@@ -836,14 +862,6 @@
     }
     &-text {
       padding: 20px 0 0 0;
-    }
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .home {
-    &-content {
-      padding-left: 20px;
     }
   }
 }
