@@ -45,7 +45,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .head {
-  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangles.png");
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("../images/Rectangles.png");
   background-size: cover;
   background-position: center;
   height: 300px;

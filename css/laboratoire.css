@@ -45,7 +45,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .head {
-  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangles.png");
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("../images/Rectangles.png");
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -86,7 +86,7 @@ body::-webkit-scrollbar-thumb {
 .main .splide .bg {
   width: 90%;
   height: 450px;
-  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangle 3195.png");
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("../images/Rectangle 3195.png");
   background-size: cover;
   background-position: center;
 }

@@ -84,19 +84,19 @@
   }
   &-content-1 {
     background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
-      url("/images/Rectangle\ 280.png");
+      url("../images/Rectangle\ 280.png");
     background-size: cover;
     background-position: center;
   }
   &-content-2 {
     background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
-      url("/images/Intersect.png");
+      url("../images/Intersect.png");
     background-size: cover;
     background-position: center;
   }
   &-content-3 {
     background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
-      url("/images/Rectangle\ 300.png");
+      url("../images/Rectangle\ 300.png");
     background-size: cover;
     background-position: center;
   }
@@ -216,7 +216,7 @@
   }
   &-card:nth-child(1) {
     background: linear-gradient(to right, #272d4ebf, #272d4e00),
-      url("/images/Rectangle\ 2590.png");
+      url("../images/Rectangle\ 2590.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -226,7 +226,7 @@
           rgba(39, 45, 78, 0.16) 0%,
           #27ae60 100%
         ),
-        url("/images/Rectangle\ 2590.png");
+        url("../images/Rectangle\ 2590.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -234,7 +234,7 @@
   }
   &-card:nth-child(2) {
     background: linear-gradient(to right, #272d4ebf, #272d4e00),
-      url("/images/Rectangle\ 2590.png");
+      url("../images/Rectangle\ 2590.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -244,7 +244,7 @@
           rgba(39, 45, 78, 0.16) 0%,
           #27ae60 100%
         ),
-        url("/images/Rectangle\ 2590.png");
+        url("../images/Rectangle\ 2590.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -252,7 +252,7 @@
   }
   &-card:nth-child(3) {
     background: linear-gradient(to right, #272d4ebf, #272d4e00),
-      url("/images/Rectangle.png");
+      url("../images/Rectangle.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -262,7 +262,7 @@
           rgba(39, 45, 78, 0.16) 0%,
           #27ae60 100%
         ),
-        url("/images/Rectangle.png");
+        url("../images/Rectangle.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -270,7 +270,7 @@
   }
   &-card:nth-child(4) {
     background: linear-gradient(to right, #272d4ebf, #272d4e00),
-      url("/images/Rectangle\ 252.png");
+      url("../images/Rectangle\ 252.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -280,7 +280,7 @@
           rgba(39, 45, 78, 0.16) 0%,
           #27ae60 100%
         ),
-        url("/images/Rectangle\ 252.png");
+        url("../images/Rectangle\ 252.png");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -576,7 +576,7 @@
             rgba(39, 45, 78, 0) 0%,
             rgba(39, 45, 78, 0.32) 100%
           ),
-          url(/images/Rectangle\ 280.png);
+          url(../images/Rectangle\ 280.png);
         background-size: cover;
         background-position: center;
         display: flex;

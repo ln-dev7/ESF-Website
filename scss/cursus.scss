@@ -2,7 +2,7 @@
 
 .head {
   background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
-    url("/images/Rectangles.png");
+    url("../images/Rectangles.png");
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -109,7 +109,7 @@
   &-card:nth-child(1) {
     .card-image {
       background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
-        url("/images/Rectangle\ 2590.png");
+        url("../images/Rectangle\ 2590.png");
       background-size: cover;
       background-position: center;
     }
@@ -122,7 +122,7 @@
     .card-image {
       justify-content: flex-end;
       background-image: linear-gradient(to left, #272d4ebf, #272d4e00),
-        url("/images/Rectangle.png");
+        url("../images/Rectangle.png");
       background-size: cover;
       background-position: center;
       h2 {
@@ -133,7 +133,7 @@
   &-card:nth-child(3) {
     .card-image {
       background-image: linear-gradient(to right, #272d4ebf, #272d4e00),
-        url("/images/Rectangle\ 252.png");
+        url("../images/Rectangle\ 252.png");
       background-size: cover;
       background-position: center;
     }

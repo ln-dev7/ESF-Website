@@ -45,7 +45,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .head {
-  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangles.png");
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("../images/Rectangles.png");
   background-size: cover;
   background-position: center;
   height: 300px;
@@ -148,7 +148,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 600;
 }
 .main-card:nth-child(1) .card-image {
-  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangle 2590.png");
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("../images/Rectangle 2590.png");
   background-size: cover;
   background-position: center;
 }
@@ -160,7 +160,7 @@ body::-webkit-scrollbar-thumb {
 }
 .main-card:nth-child(2) .card-image {
   justify-content: flex-end;
-  background-image: linear-gradient(to left, #272d4ebf, #272d4e00), url("/images/Rectangle.png");
+  background-image: linear-gradient(to left, #272d4ebf, #272d4e00), url("../images/Rectangle.png");
   background-size: cover;
   background-position: center;
 }
@@ -168,7 +168,7 @@ body::-webkit-scrollbar-thumb {
   padding-right: 20px;
 }
 .main-card:nth-child(3) .card-image {
-  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("/images/Rectangle 252.png");
+  background-image: linear-gradient(to right, #272d4ebf, #272d4e00), url("../images/Rectangle 252.png");
   background-size: cover;
   background-position: center;
 }
